@@ -1,0 +1,13 @@
+<mat-sidenav>
+  <mat-nav-list>
+    <a
+      mat-list-item
+      *ngFor="let item of menuItems"
+      (mouseenter)="item.hover = true"
+      (mouseleave)="item.hover = false"
+    >
+      <mat-icon>{{ item.icon }}</mat-icon>
+      <span *ngIf="item.hover">{{ item.name }}</span>
+    </a>
+  </mat-nav-list>
+</mat-sidenav>
