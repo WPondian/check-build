@@ -1,8 +1,21 @@
 <div class="side-menu">
   <ul class="menu-list">
-    <li *ngFor="let item of menuItems" class="menu-item">
-      <i class="material-icons">{{ item.icon }}</i>
-      <span class="menu-item-name">{{ item.name }}</span>
-    </li>
+    <div>
+      <li
+        *ngFor="let item of menuItems"
+        [ngClass]="'menu-item ' + (item.name === menuAtivo ? 'ativo' : '')"
+        class="menu-item"
+        (click)="menuAtivo = item.name"
+      >
+        <div class="circulo-icone">
+          <mat-icon
+            aria-hidden="false"
+            aria-label="Example home icon"
+            [fontIcon]="item.icon"
+          ></mat-icon>
+        </div>
+        <!-- <span class="menu-item-name">{{ item.name }}</span> -->
+      </li>
+    </div>
   </ul>
 </div>

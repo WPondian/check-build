@@ -1,25 +1,91 @@
 .side-menu {
-    width: 250px;
-    background-color: #333;
+    width: 70px;
+    background-color: #212121;
     color: #fff;
+    height: 100vh;
   }
   
   .menu-list {
     list-style: none;
     padding: 0;
     margin: 0;
+    padding-top: 20px;
+    padding-left: 10px;
   }
   
   .menu-item {
     display: flex;
     align-items: center;
+    position: relative;
     padding: 10px;
     cursor: pointer;
+    text-align: center;
+    justify-content: center;
+    margin-top: 15px;
+    margin-bottom: 15px;
+    padding-right: 20px;
   }
   
   .menu-item:hover .menu-item-name {
     display: inline;
   }
+  
+  .menu-item.ativo {
+    background-color: rgb(69, 67, 67);
+    border-top-left-radius: 30px;
+    border-bottom-left-radius: 30px;
+  }
+  
+  .menu-item.ativo::before {
+    content: '';
+    position: absolute;
+    top: -20px;
+    left: 31px;
+    width: 29px;
+    height: 20px;
+    border-bottom-right-radius: 20px;
+    box-shadow: 18px 7px 0 7px rgb(69, 67, 67);
+    background: transparent;
+  }
+
+  .menu-item.ativo::after {
+    content: '';
+    position: absolute;
+    top: 55px;
+    left: 31px;
+    width: 29px;
+    height: 20px;
+    border-top-right-radius: 20px;
+    box-shadow: 18px -7px 0 7px rgb(69, 67, 67);
+    background: transparent;
+  }
+
+  .menu-item .circulo-icone{
+    position: relative;
+    width: 100%;
+    height: 100%;
+    border-radius: 20px;
+    padding: 3px 6px;
+    background: #212121;
+    transition: background-color 1s;
+  }
+
+  .menu-item .circulo-icone:hover{
+    background: #dfdfdf;
+    color: rgb(3, 154, 195);
+  }
+
+  .menu-item.ativo .circulo-icone{
+    position: relative;
+    width: 100%;
+    height: 100%;
+    border-radius: 20px;
+    background: rgb(3, 154, 195);
+    padding: 3px 6px;
+  }
+
+  /* .menu-item.ativo mat-icon::before {
+  } */
   
   .menu-item-name {
     display: none;
