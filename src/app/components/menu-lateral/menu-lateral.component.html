@@ -4,17 +4,22 @@
       <li
         *ngFor="let item of menuItems"
         [ngClass]="'menu-item ' + (item.name === menuAtivo ? 'ativo' : '')"
-        class="menu-item"
-        (click)="menuAtivo = item.name"
       >
-        <div class="circulo-icone">
+        <div
+          class="circulo-icone"
+          (click)="redirecionaMenu(item.name)"
+          (mouseover)="mouseHover($event, item.color, item.name)"
+          (mouseout)="mouseHover($event, 'white', item.name)"
+          [ngStyle]="{
+            'background-color': item.name === menuAtivo ? item.color : ''
+          }"
+        >
           <mat-icon
             aria-hidden="false"
             aria-label="Example home icon"
             [fontIcon]="item.icon"
           ></mat-icon>
         </div>
-        <!-- <span class="menu-item-name">{{ item.name }}</span> -->
       </li>
     </div>
   </ul>

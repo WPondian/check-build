@@ -1,0 +1,36 @@
+<mat-form-field class="example-full-width">
+  <mat-label>Favorite food</mat-label>
+  <input matInput placeholder="Ex. Pizza" value="" [(ngModel)]="texto" />
+</mat-form-field>
+<p>
+  {{ texto }}
+</p>
+
+<section class="example-section">
+  <span class="example-list-section">
+    <mat-checkbox
+      class="example-margin"
+      [checked]="allComplete"
+      [color]="task.color"
+      [indeterminate]="someComplete()"
+      (change)="setAll($event.checked)"
+    >
+      {{ task.name }}
+    </mat-checkbox>
+  </span>
+  <span class="example-list-section">
+    <ul>
+      @for (subtask of task.subtasks; track subtask) {
+      <li>
+        <mat-checkbox
+          [(ngModel)]="subtask.completed"
+          [color]="subtask.color"
+          (ngModelChange)="updateAllComplete()"
+        >
+          {{ subtask.name }}
+        </mat-checkbox>
+      </li>
+      }
+    </ul>
+  </span>
+</section>

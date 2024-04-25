@@ -1,0 +1,28 @@
+.modal{
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
+
+.w-100{
+    width: 100%;
+}
+
+button.btn-padrao{
+    background-color: #640db6;
+    border-color: #640db6;
+    color: #ffffff;
+    padding-right: 10px;
+    padding-left: 10px;
+}
+
+button.btn-padrao:hover{
+    background-color: #8923e9;
+}
+
+.mdc-line-ripple::after{
+    border-color: #8923e9!important;
+    border-bottom-color: #8923e9!important;
+    background-color: #8923e9!important;
+}

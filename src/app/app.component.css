@@ -1,0 +1,5 @@
+.conteudo{
+    flex: 1;
+    padding-left: 10px;
+    z-index: 2;
+}

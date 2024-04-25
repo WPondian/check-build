@@ -1,0 +1,34 @@
+#tabelaMaterial{
+    background-color: #212121;
+    margin: 20px;
+    max-width: 95%;
+    min-width: 95%;
+}
+
+#tabelaMaterial td{
+    color: #ffffff;
+}
+
+#tabelaMaterial th{
+    color: #8923e9;
+    background-color: #111010;
+}
+.divBotaoCadastro {
+    display: flex;
+    justify-content: right;
+    max-width: 95%;
+    margin-left: 20px;
+    margin-top: 20px;
+}
+
+#btnModalCadastroMaterial{
+    background-color: #640db6;
+    border-color: #640db6;
+    color: #ffffff;
+    padding-right: 10px;
+    padding-left: 10px;
+}
+
+#btnModalCadastroMaterial:hover{
+    background-color: #8923e9;
+}
